@@ -27,4 +27,10 @@ Route::get('/projects', function (){
 
 Auth::routes();
 
+Route::prefix('account')->middleware('auth')->name('customer.')->group(function(){
+    Route::get('/', function (){
+        return 'account';
+    })->name('index');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
