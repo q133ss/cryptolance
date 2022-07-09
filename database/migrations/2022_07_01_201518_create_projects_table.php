@@ -18,9 +18,10 @@ return new class extends Migration
             $table->string('title');
             $table->text('content');
             $table->unsignedBigInteger('price');
+            $table->string('currency')->default('BNB');
             $table->foreignId('type_id')->constrained()->onDelete('cascade');
             $table->foreignId('language_id')->constrained()->onDelete('cascade');
-            $table->unsignedBigInteger('time');
+            $table->string('time');
             $table->timestamps();
         });
     }

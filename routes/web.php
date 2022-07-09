@@ -13,17 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [\App\Http\Controllers\IndexController::class, 'index']);
 
 Route::get('/how-it-works', function () {
     return view('how');
 })->name('how.it.works');
 
-Route::get('/projects', function (){
-    return view('projects.index');
-})->name('projects.index');
+Route::get('/projects',[\App\Http\Controllers\ProjectController::class, 'index'])->name('projects.index');
 
 Auth::routes();
 
