@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('content');
             $table->unsignedBigInteger('price');
             $table->string('currency')->default('BNB');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->foreignId('type_id')->constrained()->onDelete('cascade');
             $table->foreignId('language_id')->constrained()->onDelete('cascade');
             $table->string('time');

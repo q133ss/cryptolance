@@ -1,0 +1,27 @@
+<?php
+namespace App\Services;
+
+use App\Models\Project;
+use Illuminate\Http\Request;
+
+
+class FilterService{
+    public function projects(Request $request)
+    {
+        $projectsQuery = Project::query();
+        $projectsQuery->orderBy('created_at', 'ASC');
+
+        if($request->filled('category')){
+            $projectsQuery->whereIn('category_id', $request->category);
+        }
+
+        if($request->filled('price_from')){
+            $projectsQuery->where('price', '>=', $request->price_from);
+        }
+
+        if($request->filled('price_to')){
+            $projectsQuery->where('price', '<=', $request->price_to);
+        }
+        return $projectsQuery;
+    }
+}

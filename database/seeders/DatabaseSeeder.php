@@ -61,6 +61,7 @@ class DatabaseSeeder extends Seeder
                 'content' => 'Nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit inati voluptate velit esse cillum dolore eutates fugiat nulla pariatur sunt in culpa asequi officia deserunt mollit anim id est laborum ut perspiciatis...',
                 'price' => '23980',
                 'currency' => 'BTC',
+                'category_id' => rand(1,3),
                 'type_id' => 1,
                 'language_id' => 1,
                 'time' => $i.' week'

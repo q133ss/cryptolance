@@ -28,51 +28,43 @@
                         <div id="wt-twocolumns" class="wt-twocolumns wt-haslayout">
                             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 float-left">
                                 <aside id="wt-sidebar" class="wt-sidebar">
+                                    <form action="{{route('projects.index')}}" method="GET" id="filter_form">
+                                        @csrf
                                     <div class="wt-widget wt-effectiveholder">
                                         <div class="wt-widgettitle">
                                             <h2>Categories</h2>
                                         </div>
                                         <div class="wt-widgetcontent">
-                                            <form class="wt-formtheme wt-formsearch">
-                                                <fieldset>
-                                                    <div class="form-group">
-                                                        <input type="text" name="Search" class="form-control" placeholder="Search Category">
-                                                        <a href="javascrip:void(0);" class="wt-searchgbtn"><i class="lnr lnr-magnifier"></i></a>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <div class="wt-checkboxholder wt-verticalscrollbar">
-																<span class="wt-checkbox">
-																	<input id="wordpress" type="checkbox" name="description" value="company" checked>
-																	<label for="wordpress"> WordPress</label>
-																</span>
+                                            <div class="wt-checkboxholder wt-verticalscrollbar">
                                                         <span class="wt-checkbox">
-																	<input id="graphic" type="checkbox" name="description" value="company">
-																	<label for="graphic"> Graphic Design</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="website" type="checkbox" name="description" value="company">
-																	<label for="website"> Website Design</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="article" type="checkbox" name="description" value="company">
-																	<label for="article"> Article Writing</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="software" type="checkbox" name="description" value="company">
-																	<label for="software"> Software Architecture</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="wordpress1" type="checkbox" name="description" value="company">
-																	<label for="wordpress1"> WordPress</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="graphic1" type="checkbox" name="description" value="company">
-																	<label for="graphic1"> Graphic Design</label>
-																</span>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
+                                                            <input id="wordpress" type="checkbox" name="category[]" value="1" checked>
+                                                            <label for="wordpress"> WordPress</label>
+                                                        </span>
+                                                <span class="wt-checkbox">
+                                                            <input id="graphic" type="checkbox" name="category[]" value="2">
+                                                            <label for="graphic"> Graphic Design</label>
+                                                        </span>
+                                                <span class="wt-checkbox">
+                                                            <input id="website" type="checkbox" name="category[]" value="3">
+                                                            <label for="website"> Website Design</label>
+                                                        </span>
+                                                <span class="wt-checkbox">
+                                                            <input id="article" type="checkbox" name="category[]" value="company">
+                                                            <label for="article"> Article Writing</label>
+                                                        </span>
+                                                <span class="wt-checkbox">
+                                                            <input id="software" type="checkbox" name="category[]" value="company">
+                                                            <label for="software"> Software Architecture</label>
+                                                        </span>
+                                                <span class="wt-checkbox">
+                                                            <input id="wordpress1" type="checkbox" name="category[]" value="company">
+                                                            <label for="wordpress1"> WordPress</label>
+                                                        </span>
+                                                <span class="wt-checkbox">
+                                                            <input id="graphic1" type="checkbox" name="category[]" value="company">
+                                                            <label for="graphic1"> Graphic Design</label>
+                                                        </span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="wt-widget wt-effectiveholder">
@@ -80,8 +72,6 @@
                                             <h2>Project Type</h2>
                                         </div>
                                         <div class="wt-widgetcontent">
-                                            <form class="wt-formtheme wt-formsearch">
-                                                <fieldset>
                                                     <div class="wt-checkboxholder">
 																<span class="wt-radio">
 																	<input id="project" type="radio" name="description" value="company" checked>
@@ -100,8 +90,6 @@
 																	<label for="fixed"> Fixed Price Project</label>
 																</span>
                                                     </div>
-                                                </fieldset>
-                                            </form>
                                         </div>
                                     </div>
                                     <div class="wt-widget wt-effectiveholder">
@@ -109,14 +97,10 @@
                                             <h2>Location</h2>
                                         </div>
                                         <div class="wt-widgetcontent">
-                                            <form class="wt-formtheme wt-formsearch">
-                                                <fieldset>
                                                     <div class="form-group">
                                                         <input type="text" name="fullname" class="form-control" placeholder="Search Location">
                                                         <a href="javascrip:void(0);" class="wt-searchgbtn"><i class="lnr lnr-magnifier"></i></a>
                                                     </div>
-                                                </fieldset>
-                                                <fieldset>
                                                     <div class="wt-checkboxholder wt-verticalscrollbar">
 																<span class="wt-checkbox">
 																	<input id="wt-description" type="checkbox" name="description" value="company" checked>
@@ -147,8 +131,6 @@
 																	<label for="us1"> <img src="/assets/images/flag/img-02.png" alt="img description"> United States</label>
 																</span>
                                                     </div>
-                                                </fieldset>
-                                            </form>
                                         </div>
                                     </div>
                                     <div class="wt-widget wt-effectiveholder">
@@ -156,8 +138,6 @@
                                             <h2>Skills Required</h2>
                                         </div>
                                         <div class="wt-widgetcontent">
-                                            <form class="wt-formtheme wt-formsearch">
-                                                <fieldset>
                                                     <div class="wt-checkboxholder">
 																<span class="wt-checkbox">
 																	<input id="proindependent" type="checkbox" name="description" value="company" checked>
@@ -180,8 +160,6 @@
 																	<label for="rising"> New Rising Talent</label>
 																</span>
                                                     </div>
-                                                </fieldset>
-                                            </form>
                                         </div>
                                     </div>
                                     <div class="wt-widget wt-effectiveholder">
@@ -189,8 +167,7 @@
                                             <h2>Project Length</h2>
                                         </div>
                                         <div class="wt-widgetcontent">
-                                            <form class="wt-formtheme wt-formsearch">
-                                                <fieldset>
+
                                                     <div class="wt-checkboxholder">
 																<span class="wt-checkbox">
 																	<input id="anyproject" type="checkbox" name="anyproject" value="project" checked>
@@ -213,8 +190,6 @@
 																	<label for="moremonths"> More Than 06 Months</label>
 																</span>
                                                     </div>
-                                                </fieldset>
-                                            </form>
                                         </div>
                                     </div>
                                     <div class="wt-widget wt-effectiveholder">
@@ -222,56 +197,47 @@
                                             <h2>Languages</h2>
                                         </div>
                                         <div class="wt-widgetcontent">
-                                            <form class="wt-formtheme wt-formsearch">
-                                                <fieldset>
-                                                    <div class="form-group">
-                                                        <input type="text" name="fullname" class="form-control" placeholder="Search Language">
-                                                        <a href="javascrip:void(0);" class="wt-searchgbtn"><i class="lnr lnr-magnifier"></i></a>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <div class="wt-checkboxholder wt-verticalscrollbar">
-																<span class="wt-checkbox">
-																	<input id="chinese" type="checkbox" name="description" value="company" checked>
-																	<label for="chinese">Chinese</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="spanish" type="checkbox" name="description" value="company">
-																	<label for="spanish">Spanish</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="english" type="checkbox" name="description" value="company">
-																	<label for="english">English</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="arabic" type="checkbox" name="description" value="company">
-																	<label for="arabic">Arabic</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="russian" type="checkbox" name="description" value="company">
-																	<label for="russian">Russian</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="chinese1" type="checkbox" name="description" value="company">
-																	<label for="chinese1">Chinese</label>
-																</span>
-                                                        <span class="wt-checkbox">
-																	<input id="spanish1" type="checkbox" name="description" value="company">
-																	<label for="spanish1">Spanish</label>
-																</span>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
+                                                <div class="wt-checkboxholder wt-verticalscrollbar">
+                                                            <span class="wt-checkbox">
+                                                                <input id="chinese" type="checkbox" name="description" value="company" checked>
+                                                                <label for="chinese">Chinese</label>
+                                                            </span>
+                                                    <span class="wt-checkbox">
+                                                                <input id="spanish" type="checkbox" name="description" value="company">
+                                                                <label for="spanish">Spanish</label>
+                                                            </span>
+                                                    <span class="wt-checkbox">
+                                                                <input id="english" type="checkbox" name="description" value="company">
+                                                                <label for="english">English</label>
+                                                            </span>
+                                                    <span class="wt-checkbox">
+                                                                <input id="arabic" type="checkbox" name="description" value="company">
+                                                                <label for="arabic">Arabic</label>
+                                                            </span>
+                                                    <span class="wt-checkbox">
+                                                                <input id="russian" type="checkbox" name="description" value="company">
+                                                                <label for="russian">Russian</label>
+                                                            </span>
+                                                    <span class="wt-checkbox">
+                                                                <input id="chinese1" type="checkbox" name="description" value="company">
+                                                                <label for="chinese1">Chinese</label>
+                                                            </span>
+                                                    <span class="wt-checkbox">
+                                                                <input id="spanish1" type="checkbox" name="description" value="company">
+                                                                <label for="spanish1">Spanish</label>
+                                                            </span>
+                                                </div>
                                         </div>
                                     </div>
                                     <div class="wt-widget wt-effectiveholder">
                                         <div class="wt-widgetcontent">
                                             <div class="wt-applyfilters">
                                                 <span>Click “Apply Filter” to apply latest<br> changes made by you.</span>
-                                                <a href="javascript:void(0);" class="wt-btn">Apply Filters</a>
+                                                <button class="wt-btn">Apply Filters</button>
                                             </div>
                                         </div>
                                     </div>
+                                    </form>
                                 </aside>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8 float-left">
