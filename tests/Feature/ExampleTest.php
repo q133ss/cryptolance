@@ -18,4 +18,12 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_the_project_page(){
+        $response = $this->get('/projects');
+        $response->assertStatus(200);
+
+        $response = $this->get('account');
+        $response->assertRedirect('login');
+    }
 }
