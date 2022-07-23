@@ -14,7 +14,15 @@ class Project extends Model
         return $this->belongsToMany(Tags::class, 'tags_to_projects', 'project_id', 'tag_id');
     }
 
+    public function time(){
+        return $this->hasOne(Time::class, 'id', 'time_id');
+    }
+
     public function type(){
         return $this->hasOne(Type::class, 'id', 'type_id');
+    }
+
+    public function user(){
+        return $this->hasOne(User::class, 'id', 'user_id');
     }
 }

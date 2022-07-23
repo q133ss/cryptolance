@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
+use App\Models\Category;
+use App\Models\Time;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Services\FilterService;
 
 class ProjectController extends Controller
 {
     public function index(Request $request){
-
         $filterService = new FilterService();
         $projects = $filterService->projects($request)->paginate();
-        return view('projects.index', compact('projects'));
+        $categories = Category::all();
+        $types = Type::all();
+        $times = Time::all();
+        return view('projects.index', compact('projects', 'categories', 'types', 'times'));
     }
 }

@@ -15,6 +15,12 @@ class FilterService{
             $projectsQuery->whereIn('category_id', $request->category);
         }
 
+        if($request->filled('type')){
+            if($request->type != 0) {
+                $projectsQuery->where('type_id', $request->type);
+            }
+        }
+
         if($request->filled('price_from')){
             $projectsQuery->where('price', '>=', $request->price_from);
         }
@@ -22,6 +28,11 @@ class FilterService{
         if($request->filled('price_to')){
             $projectsQuery->where('price', '<=', $request->price_to);
         }
+
+        if($request->filled('time')){
+            $projectsQuery->whereIn('time_id', $request->time);
+        }
+
         return $projectsQuery;
     }
 }
