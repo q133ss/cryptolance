@@ -201,13 +201,24 @@
                             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8 float-left">
                                 <div class="wt-userlistingholder wt-haslayout">
                                     @if(Request()->search != null)
+                                    <form class="wt-formtheme wt-formbanner" method="get" action="{{route('projects.index')}}">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <input type="text" name="search" class="form-control" value="{{Request()->search}}" placeholder="Разработка сайта">
+                                                <div class="wt-formoptions">
+                                                    <button type="submit" class="wt-searchbtn"><i class="lnr lnr-magnifier"></i></button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+
                                     <div class="wt-userlistingtitle">
-                                        <span>01 - 48 of 57143 results for <em>"{{Request()->search}}"</em></span>
+                                        <span>{{$projects->total()}} результатов для <em>"{{Request()->search}}"</em></span>
                                     </div>
                                     @endif
                                     <div class="wt-filterholder">
                                         <ul class="wt-filtertag">
-                                            @if(!empty(Request()->all()))
+                                            @if(!empty(Request()->all()) && !isset(Request()->search))
                                             <li class="wt-filtertagclear">
                                                 <a href="{{route('projects.index')}}"><i class="fa fa-times"></i> <span>Очистить все фильтры</span></a>
                                             </li>
@@ -296,7 +307,7 @@
                                         </div>
                                     </div>
                                     @endforeach
-                                    {{$projects->links('pagination.project')}}
+                                    {{$projects->appends(Request()->query())->links('pagination.project')}}
                                 </div>
                             </div>
                         </div>

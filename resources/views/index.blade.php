@@ -23,25 +23,25 @@
                                 <p>Мы помогаем исполнителям находить заказчиков, которые готовы оплачивать услуги в криптовалюте</p>
                             </div>
                         </div>
-                        <form class="wt-formtheme wt-formbanner">
+                        <form class="wt-formtheme wt-formbanner" method="get" action="{{route('projects.index')}}">
                             <fieldset>
                                 <div class="form-group">
-                                    <input type="text" name="fullname" class="form-control" placeholder="Разработка сайта">
+                                    <input type="text" name="search" class="form-control" placeholder="Разработка сайта">
                                     <div class="wt-formoptions">
-                                        <div class="wt-dropdown">
-                                            <span>В: <em class="selected-search-type">Фрилансеры </em><i class="lnr lnr-chevron-down"></i></span>
-                                        </div>
-                                        <div class="wt-radioholder">
-                                            <span class="wt-radio">
-                                                <input id="wt-freelancers" data-title="Freelancers" type="radio" name="searchtype" value="freelancer" checked>
-                                                <label for="wt-freelancers">Фрилансеры</label>
-                                            </span>
-                                            <span class="wt-radio">
-                                                <input id="wt-jobs"  data-title="Jobs" type="radio" name="searchtype" value="job">
-                                                <label for="wt-jobs">Исполнители</label>
-                                            </span>
-                                        </div>
-                                        <a href="userlisting.html" class="wt-searchbtn"><i class="lnr lnr-magnifier"></i></a>
+{{--                                        <div class="wt-dropdown">--}}
+{{--                                            <span>В: <em class="selected-search-type">Фрилансеры </em><i class="lnr lnr-chevron-down"></i></span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="wt-radioholder">--}}
+{{--                                            <span class="wt-radio">--}}
+{{--                                                <input id="wt-freelancers" data-title="Freelancers" type="radio" name="searchtype" value="freelancer" checked>--}}
+{{--                                                <label for="wt-freelancers">Фрилансеры</label>--}}
+{{--                                            </span>--}}
+{{--                                            <span class="wt-radio">--}}
+{{--                                                <input id="wt-jobs"  data-title="Jobs" type="radio" name="searchtype" value="job">--}}
+{{--                                                <label for="wt-jobs">Исполнители</label>--}}
+{{--                                            </span>--}}
+{{--                                        </div>--}}
+                                        <button type="submit" class="wt-searchbtn"><i class="lnr lnr-magnifier"></i></button>
                                     </div>
                                 </div>
                             </fieldset>

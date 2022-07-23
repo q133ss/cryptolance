@@ -33,6 +33,10 @@ class FilterService{
             $projectsQuery->whereIn('time_id', $request->time);
         }
 
+        if($request->filled('search')){
+            $projectsQuery->where('title', 'LIKE', "%{$request->search}%")->orWhere('content', 'LIKE', "%{$request->search}%");
+        }
+
         return $projectsQuery;
     }
 }
