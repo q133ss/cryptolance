@@ -80,11 +80,11 @@
                             <div class="wt-categorycontent">
                                 <figure><img src="{{$category->img}}" alt="image description"></figure>
                                 <div class="wt-cattitle">
-                                    <h3><a href="javascrip:void(0);">{{$category->name}}</a></h3>
+                                    <h3><a href="/projects?category[]={{$category->id}}">{{$category->name}}</a></h3>
                                 </div>
                                 <div class="wt-categoryslidup">
                                     <p>{{$category->description}}</p>
-                                    <a href="javascript:void(0);">Перейти <i class="fa fa-arrow-right"></i></a>
+                                    <a href="/projects?category[]={{$category->id}}">Перейти <i class="fa fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>

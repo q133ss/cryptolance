@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Project;
 use App\Models\Time;
 use App\Models\Type;
 use Illuminate\Http\Request;
@@ -17,5 +18,10 @@ class ProjectController extends Controller
         $types = Type::all();
         $times = Time::all();
         return view('projects.index', compact('projects', 'categories', 'types', 'times'));
+    }
+
+    public function single($id){
+        $project = Project::find($id);
+        return view('projects.single', compact('project'));
     }
 }

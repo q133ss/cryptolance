@@ -301,7 +301,7 @@
                                                     <li><span><i class="far fa-clock wt-viewjobclock"></i>Срок: {{$project->time->name}}</span></li>
 {{--                                                    <li><span><i class="fa fa-tag wt-viewjobtag"></i>Job ID: gy3yV2Vm5u</span></li>--}}
                                                     <li><a href="javascript:void(0);"><i class="fa fa-heart"></i> Сохранить</a></li>
-                                                    <li class="wt-btnarea"><a href="userlisting.html" class="wt-btn">Посмотреть</a></li>
+                                                    <li class="wt-btnarea"><a href="{{route('projects.single', $project->id)}}" class="wt-btn">Посмотреть</a></li>
                                                 </ul>
                                             </div>
                                         </div>

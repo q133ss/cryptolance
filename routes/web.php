@@ -20,7 +20,7 @@ Route::get('/how-it-works', function () {
 })->name('how.it.works');
 
 Route::get('/projects',[\App\Http\Controllers\ProjectController::class, 'index'])->name('projects.index');
-
+Route::get('/project/{id}', [\App\Http\Controllers\ProjectController::class, 'single'])->name('projects.single');
 Auth::routes();
 
 Route::prefix('account')->middleware('auth')->name('customer.')->group(function(){

@@ -19,7 +19,7 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_the_project_page(){
+    public function test_the_main_pages(){
         $response = $this->get('/projects');
         $response->assertStatus(200);
 
