@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="/assets/css/transitions.css">
     <link rel="stylesheet" href="/assets/css/responsive.css">
     <script src="/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    @yield('meta')
 </head>
 <body class="wt-login">
 <!--[if lt IE 8]>
