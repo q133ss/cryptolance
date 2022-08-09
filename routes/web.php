@@ -23,10 +23,9 @@ Route::get('/projects',[\App\Http\Controllers\ProjectController::class, 'index']
 Route::get('/project/{id}', [\App\Http\Controllers\ProjectController::class, 'single'])->name('projects.single');
 Auth::routes();
 
-Route::prefix('account')->middleware('auth')->name('customer.')->group(function(){
-    Route::get('/', function (){
-        return 'account';
-    })->name('index');
+Route::prefix('account')->middleware('auth')->name('account.')->group(function(){
+    Route::get('/', [\App\Http\Controllers\AccountController::class, 'index'])->middleware('account.create')->name('index');
+    Route::get('/settings', [\App\Http\Controllers\AccountController::class, 'settings'])->name('settings');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

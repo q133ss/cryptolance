@@ -312,6 +312,7 @@
     <!--Content Wrapper End-->
 </div>
 <!--Wrapper End-->
+@yield('script')
 <script src="/assets/js/vendor/jquery-3.3.1.js"></script>
 <script src="/assets/js/vendor/jquery-library.js"></script>
 <script src="/assets/js/vendor/bootstrap.min.js"></script>

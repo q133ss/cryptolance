@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function role(){
         return $this->hasOne(Role::class, 'id', 'role_id');
     }
+
+    public function avatar(){
+        return $this->morphOne(File::class, 'filable')->where('category', 'avatar')->limit(1);
+    }
 }
