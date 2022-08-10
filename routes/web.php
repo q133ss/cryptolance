@@ -26,6 +26,8 @@ Auth::routes();
 Route::prefix('account')->middleware('auth')->name('account.')->group(function(){
     Route::get('/', [\App\Http\Controllers\AccountController::class, 'index'])->middleware('account.create')->name('index');
     Route::get('/settings', [\App\Http\Controllers\AccountController::class, 'settings'])->name('settings');
+    Route::get('/logout', [\App\Http\Controllers\AccountController::class, 'logout'])->name('logout');
+    Route::post('/save', [\App\Http\Controllers\AccountController::class, 'save'])->name('save');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

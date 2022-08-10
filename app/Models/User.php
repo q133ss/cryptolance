@@ -43,10 +43,35 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function role(){
         return $this->hasOne(Role::class, 'id', 'role_id');
     }
 
+    /**
+     * @param $src
+     * @return void
+     */
+    public function changeAvatar($src):void{
+        if($this->avatar){
+            $file = File::where('category', 'avatar')->where('filable_type','App\Models\User')->where('filable_id', $this->id)->first();
+            $file->src = $src;
+            $file->save();
+        }else{
+            $file = new File();
+            $file->src = $src;
+            $file->category = 'avatar';
+            $file->filable_type = 'App\Models\User';
+            $file->filable_id = $this->id;
+            $file->save();
+        }
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     */
     public function avatar(){
         return $this->morphOne(File::class, 'filable')->where('category', 'avatar')->limit(1);
     }
