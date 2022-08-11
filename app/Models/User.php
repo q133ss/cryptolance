@@ -51,17 +51,19 @@ class User extends Authenticatable
     }
 
     /**
-     * @param $src
+     * @param $img
      * @return void
      */
-    public function changeAvatar($src):void{
+    public function changeAvatar($img):void{
         if($this->avatar){
             $file = File::where('category', 'avatar')->where('filable_type','App\Models\User')->where('filable_id', $this->id)->first();
-            $file->src = $src;
+            $img_path = $img->store('uploads', 'public');
+            $file->src = '/storage/'.$img_path;
             $file->save();
         }else{
             $file = new File();
-            $file->src = $src;
+            $img_path = $img->store('uploads', 'public');
+            $file->src = '/storage/'.$img_path;
             $file->category = 'avatar';
             $file->filable_type = 'App\Models\User';
             $file->filable_id = $this->id;

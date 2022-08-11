@@ -11,7 +11,8 @@ use App\Services\Account\SaveService;
 class AccountController extends Controller
 {
     public function index(){
-        return view('account.index' );
+        $user = Auth()->user();
+        return view('account.index', compact('user'));
     }
 
     public function settings(){
@@ -24,7 +25,8 @@ class AccountController extends Controller
      * @return void
      */
     public function save(SaveRequest $request){
-        SaveService::save($request->validated());
+        SaveService::save($request);
+        return to_route('account.index');
     }
 
     public function logout(){

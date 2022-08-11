@@ -9,6 +9,8 @@
         <!--Register Form Start-->
         <section class="wt-haslayout wt-dbsectionspace">
             <div class="row">
+                <form action="{{route('account.save')}}" id="settings-form" method="POST" enctype="multipart/form-data">
+                    @csrf
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
                     <div class="wt-dashboardbox wt-dashboardtabsholder wt-accountsettingholder">
                         <div class="wt-dashboardtabs">
@@ -34,18 +36,18 @@
                                         <ul class="wt-accountinfo">
                                             <div class="form-group">
                                                 <label for="avatar">Ваше фото</label>
-                                                <input type="file" id="avatar" class="form-control-file">
+                                                <input type="file" name="avatar" class="form-control @if($errors->has('avatar')) is-invalid @endif">
                                             </div>
                                             <div class="form-group form-group-half" style="padding:0 5px 0 0">
-                                                <input type="text" id="name" value="{{$user->name}}" class="form-control" placeholder="Ваше имя">
+                                                <input type="text" name="name" value="{{$user->name}}" class="form-control The name field is required. @if($errors->has('name')) is-invalid @endif" placeholder="Ваше имя">
                                             </div>
 
                                             <div class="form-group form-group-half" style="padding:0 0 0 5px">
-                                                <input type="text" id="lastname" class="form-control" placeholder="Ваша фамилия">
+                                                <input type="text" name="lastname" value="{{$user->lastname}}" class="form-control @if($errors->has('lastname')) is-invalid @endif" placeholder="Ваша фамилия">
                                             </div>
 
                                             <div class="form-group">
-                                                <textarea id="about" class="form-control" placeholder="Расскажите немного о себе"></textarea>
+                                                <textarea name="about" class="form-control @if($errors->has('about')) is-invalid @endif" placeholder="Расскажите немного о себе">{{$user->about}}</textarea>
                                             </div>
                                         </ul>
                                     </div>
@@ -188,45 +190,13 @@
                     <div class="wt-updatall">
                         <i class="ti-announcement"></i>
                         <span>Сохраните внесенные изменения нажав на кнопку</span>
-                        <a class="wt-btn" href="javascript:void(0);" id="save">Сохранить и продолжить</a>
+                        <a class="wt-btn" onclick="$('#settings-form').submit()" href="#" id="save">Сохранить и продолжить</a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3"></div>
+                </form>
             </div>
         </section>
         <!--Register Form End-->
     </main>
-@endsection
-@section('scripts')
-    <script>
-        $('#save').click(function(){
-            // let avatarInput = $('#avatar');
-            // let name = $('#name').val();
-            // let lastname = $('#lastname').val();
-            // let about = $('#about').val();
-
-
-            let formData = new FormData();
-            formData.append('name', $('#name').val());
-            formData.append('avatar', $('#avatar')[0].files[0]);
-            formData.append('lastname', $('#lastname').val());
-            formData.append('about', $('#about').val());
-            console.log(formData)
-            $.ajax({
-                type:'POST',
-                headers: {
-                    'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-                },
-                url:'{{route('account.save')}}',
-                data: this.formData,
-                // avatar:avatar,
-                // name: name,
-                // lastname: lastname,
-                // about:about
-                success:function(data){
-                   console.log(data)
-                }
-            });
-        });
-    </script>
 @endsection

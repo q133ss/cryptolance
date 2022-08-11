@@ -24,7 +24,7 @@
                                 <div class="row">
                                     <div class="wt-userprofile">
                                         <figure>
-                                            <img src="/assets/images/profile/img-01.jpg" alt="img description">
+                                            <img src="{{$user->avatar->src}}" alt="avatar">
                                             <div class="wt-userdropdown wt-online">
                                             </div>
                                         </figure>

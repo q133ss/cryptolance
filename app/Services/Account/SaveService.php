@@ -10,7 +10,7 @@ class SaveService{
         $user->about = $request->about;
         $user->save();
         if($request->avatar){
-            $user->changeAvatar($request->avatar);
+            $user->changeAvatar($request->file('avatar'));
         }
         return $user;
     }

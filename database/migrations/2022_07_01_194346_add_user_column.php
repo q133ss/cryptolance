@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->text('description')->nullable();
+            $table->string('lastname')->nullable();
+            $table->text('about')->nullable();
             $table->foreignId('role_id')->constrained()->onDelete('cascade');
             $table->double('balance')->default(0);
         });

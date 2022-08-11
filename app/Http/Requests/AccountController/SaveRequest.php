@@ -23,13 +23,23 @@ class SaveRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'avatar' => 'file',
-            'name' => 'required|string',
-            'lastname' => 'required|string',
-            'about' => 'required|string',
-            'lang' => 'string',
-            'currency' => 'string'
-        ];
+        if(Auth()->user()->avatar){
+            return [
+                'name' => 'required|string',
+                'lastname' => 'required|string',
+                'about' => 'required|string',
+                'lang' => 'string',
+                'currency' => 'string'
+            ];
+        }else {
+            return [
+                'avatar' => 'required',
+                'name' => 'required|string',
+                'lastname' => 'required|string',
+                'about' => 'required|string',
+                'lang' => 'string',
+                'currency' => 'string'
+            ];
+        }
     }
 }
