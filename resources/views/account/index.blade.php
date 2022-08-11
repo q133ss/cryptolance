@@ -29,7 +29,7 @@
                                             </div>
                                         </figure>
                                         <div class="wt-title">
-                                            <h3><i class="fa fa-check-circle"></i> Valentine Mehring</h3>
+                                            <h3><i class="fa fa-check-circle"></i>{{$user->fio()}}</h3>
                                             <span>5.0/5 <a class="javascript:void(0);">(860 Feedback)</a> <br>Member since May 30, 2013 <br><a href="javascript:void(0);">@valentine20658</a> <a href="javascript:void(0);" class="wt-reportuser">Report User</a></span>
                                         </div>
                                     </div>
@@ -45,10 +45,7 @@
                                             <li><a href="javascript:void(0);" class="wt-clicksave"><i class="fa fa-heart"></i> Save</a></li>
                                         </ul>
                                         <div class="wt-description">
-                                            <p>Excepteur sint occaecat cupidatat non proident, saeunt in culpa qui officia deserunt mollit anim id est laborum. Seden utem perspiciatis undesieu omnis iste natus error sit voluptatem.</p>
-                                            <p>Accusantium doque laudantium, totam rem aiam eaqueiu ipsa quae ab illoion inventore veritatisetm quasitea architecto beataea dictaed quia couuntur magni dolores eos quist ratione vtatem seque nesnt. Neque porro quamest quioremas ipsum quiatem dolor sitem amet conctetur adipisci velit sedate quianon.</p>
-                                            <p>Excepteur sint occaecat cupidatat non proident, saeunt in culpa qui officia deserunt mollit anim id est laborum. Seden utem perspiciatis undesieu omnis iste natus error sit voluptatem.</p>
-                                            <p>Accusantium doque laudantium, totam rem aiam eaqueiu ipsa quae ab illoion inventore veritatisetm quasitea architecto beataea dictaed quia couuntur magni dolores eos quist ratione vtatem seque nesnt. Neque porro quamest quioremas ipsum quiatem dolor sitem amet conctetur adipisci velit sedate quianon.</p>
+                                            <p>{{$user->about}}</p>
                                         </div>
                                     </div>
                                     <div id="wt-statistics" class="wt-statistics wt-profilecounter">

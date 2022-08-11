@@ -56,6 +56,7 @@ class User extends Authenticatable
      */
     public function changeAvatar($img):void{
         if($this->avatar){
+            //нужно удалять старый
             $file = File::where('category', 'avatar')->where('filable_type','App\Models\User')->where('filable_id', $this->id)->first();
             $img_path = $img->store('uploads', 'public');
             $file->src = '/storage/'.$img_path;
@@ -76,5 +77,11 @@ class User extends Authenticatable
      */
     public function avatar(){
         return $this->morphOne(File::class, 'filable')->where('category', 'avatar')->limit(1);
+    }
+
+    public function fio(){
+        $name = $this->name;
+        $lastname = $this->lastname;
+        return $name.' '.$lastname;
     }
 }

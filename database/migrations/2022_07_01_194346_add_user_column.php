@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('lastname')->nullable();
             $table->text('about')->nullable();
+            $table->enum('gender', ['male', 'female'])->nullable();
             $table->foreignId('role_id')->constrained()->onDelete('cascade');
             $table->double('balance')->default(0);
         });

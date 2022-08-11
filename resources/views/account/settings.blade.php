@@ -34,16 +34,55 @@
                                             </p>
                                         </div>
                                         <ul class="wt-accountinfo">
-                                            <div class="form-group">
-                                                <label for="avatar">Ваше фото</label>
-                                                <input type="file" name="avatar" class="form-control @if($errors->has('avatar')) is-invalid @endif">
+{{--                                            <div class="form-group">--}}
+{{--                                                <label for="avatar">Ваше фото</label>--}}
+{{--                                                <input type="file" name="avatar" class="form-control @if($errors->has('avatar')) is-invalid @endif">--}}
+{{--                                            </div>--}}
+                                            <label for="avatar">Ваше фото</label>
+                                            <div class="form-group form-group-label">
+                                                <div class="wt-labelgroup">
+                                                    <label for="filew">
+                                                        <span class="wt-btn">Выбрать фото</span>
+                                                        <input type="file" name="avatar" id="filew">
+                                                    </label>
+                                                    <span>Переместите фото сюда</span>
+                                                    <em class="wt-fileuploading">Загрузка<i class="fa fa-spinner fa-spin"></i></em>
+                                                </div>
                                             </div>
+                                            @if($user->avatar)
+                                            <div class="form-group">
+                                                <ul class="wt-attachfile wt-attachfilevtwo">
+                                                    <li class="wt-uploadingholder">
+                                                        <div class="wt-uploadingbox">
+                                                            <div class="wt-designimg">
+                                                                <input id="demoq" type="radio" name="employees" value="company" checked="">
+                                                                <label for="demoq"><img src="{{$user->avatar->src}}" alt="img description"><i class="fa fa-check"></i></label>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            @endif
                                             <div class="form-group form-group-half" style="padding:0 5px 0 0">
                                                 <input type="text" name="name" value="{{$user->name}}" class="form-control The name field is required. @if($errors->has('name')) is-invalid @endif" placeholder="Ваше имя">
                                             </div>
 
                                             <div class="form-group form-group-half" style="padding:0 0 0 5px">
                                                 <input type="text" name="lastname" value="{{$user->lastname}}" class="form-control @if($errors->has('lastname')) is-invalid @endif" placeholder="Ваша фамилия">
+                                            </div>
+
+                                            <div class="form-group form-group-half">
+                                                <span class="wt-select">
+                                                    <select name="gender">
+                                                        <option value="" disabled="">Ваш пол</option>
+                                                        <option value="male">Мужской</option>
+                                                        <option value="female">Женский</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+
+                                            <div class="form-group form-group-half">
+                                                <input type="text" name="nickname" value="{{$user->nickname}}" class="form-control @if($errors->has('nickname')) is-invalid @endif" placeholder="Ваш логин">
                                             </div>
 
                                             <div class="form-group">
