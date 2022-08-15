@@ -174,16 +174,17 @@
                                                     <span>Войти</span>
                                                     <a href="javascript:;"><i class="fa fa-times"></i></a>
                                                 </div>
-                                                <form class="wt-formtheme wt-loginform do-login-form">
+                                                <form class="wt-formtheme wt-loginform do-login-form" action="{{route('login')}}" method="POST">
+                                                    @csrf
                                                     <fieldset>
                                                         <div class="form-group">
-                                                            <input type="text" name="username" class="form-control" placeholder="Логин">
+                                                            <input type="text" name="email" class="form-control" placeholder="Логин/Email">
                                                         </div>
                                                         <div class="form-group">
                                                             <input type="password" name="password" class="form-control" placeholder="Пароль">
                                                         </div>
                                                         <div class="wt-logininfo">
-                                                            <a href="javascript:;" class="wt-btn do-login-button">Войти</a>
+                                                            <button type="submit" class="wt-btn do-login-button">Войти</button>
                                                             <span class="wt-checkbox">
 																<input id="wt-login" type="checkbox" name="rememberme">
 																<label for="wt-login">Запомнить меня</label>
