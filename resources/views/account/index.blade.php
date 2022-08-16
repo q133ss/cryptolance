@@ -38,7 +38,7 @@
                             <div class="col-12 col-sm-12 col-md-12 col-lg-9 float-left">
                                 <div class="row">
                                     <div class="wt-proposalhead wt-userdetails">
-                                        <h2>Classified Posting, Data Entry, Typing Expert</h2>
+                                        <h2>{{$user->speciality}}</h2>
                                         <ul class="wt-userlisting-breadcrumb wt-userlisting-breadcrumbvtwo">
                                             <li><span><i class="far fa-money-bill-alt"></i> $44.00 / hr</span></li>
                                             <li><span><img src="/assets/images/flag/img-02.png" alt="img description">  United States</span></li>
@@ -69,7 +69,7 @@
                                         <div class="wt-description">
                                             <p>* Adpsicing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
                                             @if(Route::currentRouteName() == 'account.index')
-                                                <a href="javascript:void(0);" class="wt-btn" data-toggle="modal">Изменить</a>
+                                                <a href="{{route('account.settings')}}" class="wt-btn">Изменить</a>
                                             @else
                                                 <a href="javascript:void(0);" class="wt-btn" data-toggle="modal" data-target="#reviewermodal">Отправить предложение</a>
                                             @endif

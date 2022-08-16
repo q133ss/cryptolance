@@ -40,12 +40,11 @@
 {{--                                            </div>--}}
                                             <label for="avatar">Ваше фото</label>
                                             <div class="form-group form-group-label">
-                                                <div class="wt-labelgroup">
+                                                <div class="wt-labelgroup" style="text-align: center">
                                                     <label for="filew">
                                                         <span class="wt-btn">Выбрать фото</span>
                                                         <input type="file" name="avatar" id="filew">
                                                     </label>
-                                                    <span>Переместите фото сюда</span>
                                                     <em class="wt-fileuploading">Загрузка<i class="fa fa-spinner fa-spin"></i></em>
                                                 </div>
                                             </div>
@@ -83,6 +82,10 @@
 
                                             <div class="form-group form-group-half">
                                                 <input type="text" name="nickname" value="{{$user->nickname}}" class="form-control @if($errors->has('nickname')) is-invalid @endif" placeholder="Ваш логин">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" name="speciality" value="{{$user->speciality}}" class="form-control @if($errors->has('speciality')) is-invalid @endif" placeholder="Ваша специальность">
                                             </div>
 
                                             <div class="form-group">

@@ -186,14 +186,14 @@
                                                         <div class="wt-logininfo">
                                                             <button type="submit" class="wt-btn do-login-button">Войти</button>
                                                             <span class="wt-checkbox">
-																<input id="wt-login" type="checkbox" name="rememberme">
+																<input id="wt-login" type="checkbox" checked name="rememberme">
 																<label for="wt-login">Запомнить меня</label>
 															</span>
                                                         </div>
                                                     </fieldset>
                                                     <div class="wt-loginfooterinfo">
                                                         <a href="javascript:;" class="wt-forgot-password">Забыли пароль?</a>
-                                                        <a href="register.html">Создать аккаунт</a>
+                                                        <a href="{{route('register')}}">Создать аккаунт</a>
                                                     </div>
                                                 </form>
                                                 <form class="wt-formtheme wt-loginform do-forgot-password-form wt-hide-form">

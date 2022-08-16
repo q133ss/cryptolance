@@ -7,6 +7,7 @@ class SaveService{
         $user = Auth()->user();
         $user->name = $request->name;
         $user->lastname = $request->lastname;
+        $user->speciality = $request->speciality;
         $user->about = $request->about;
         $user->save();
         if($request->avatar){
