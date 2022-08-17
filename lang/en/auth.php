@@ -15,6 +15,8 @@ return [
 
     'register' => 'Register',
     'name' => 'Name',
+    'lastname' => 'Last name',
+    'login' => 'Login',
     'type' => 'Profile type',
     'customer' => 'Customer',
     'freelancer' => 'Freelancer',

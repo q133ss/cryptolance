@@ -5,7 +5,7 @@
  is the file you need to edit to change the look of the
  theme.
  However we used Less script to make things easy to maintain, this is the compressed ourput, we recommend to edit the less files and then recombile the files and add the result here, if you don't like to use less you can edit this file here.
- 
+
  This files contents are outlined below.
  01.	Theme Reset Style
  02.	Global Elements
@@ -317,7 +317,7 @@ address { font-style: italic; }
 .wt-checkbox input[type=checkbox] + label span{
 	float: left;
 	color: #999;
-	font-size: 13px; 
+	font-size: 13px;
 }
 .wt-checkbox input[type=checkbox]:checked + label:before,
 .wt-radio input[type=radio]:checked + label:before{content: '';}
@@ -1094,7 +1094,7 @@ li.wt-rss a { background:#ff6600; }
 	padding: 0 5px;
 	color: #fff;
 	font-size: 11px;
-	margin-left:10px; 
+	margin-left:10px;
 	font-style: normal;
 	line-height: 16px;
 	border-radius: 4px;
@@ -1108,7 +1108,7 @@ li.wt-rss a { background:#ff6600; }
 	width: 6px;
 	height: 6px;
 	right: 35px;
-	margin-top:-3px; 
+	margin-top:-3px;
 	border-radius: 50px;
 	position: absolute;
 }
@@ -1126,7 +1126,7 @@ li.wt-rss a { background:#ff6600; }
 	width: auto;
 	max-width: 36px;
 	max-height: 36px;
-	margin-right:10px; 
+	margin-right:10px;
 	border-radius: 50px;
 }
 .wt-userimg img{
@@ -1150,7 +1150,7 @@ li.wt-rss a { background:#ff6600; }
 	right: 0;
 	z-index: 9;
 	width: 350px;
-	display: none;	
+	display: none;
 	overflow:hidden;
 	background: #fff;
 	border-radius:4px;
@@ -1169,7 +1169,7 @@ li.wt-rss a { background:#ff6600; }
 	font-size:16px;
 	line-height: 16px;
 	display: inline-block;
-	vertical-align: middle; 
+	vertical-align: middle;
 }
 .wt-loginheader a{
 	color: #ddd;
@@ -1230,13 +1230,13 @@ body.wt-login .wt-loginarea{display: none;}
 	content: '';
 	height: 36px;
 	background: #ddd;
-	margin-top:-18px; 
+	margin-top:-18px;
 	position: absolute;
 }
 body.wt-login .wt-userlogedin{display: block;}
 .wt-userlogedin .wt-userimg{
 	float:left;
-	margin-right:10px; 
+	margin-right:10px;
 }
 .wt-username{overflow:hidden;}
 .wt-username h3{
@@ -1343,7 +1343,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	float: left;
 	width: 540px;
 	padding: 99px 0;
-	margin-left:-125px; 
+	margin-left:-125px;
 }
 .wt-bannermanimg{
 	margin: 0;
@@ -1415,7 +1415,7 @@ body.wt-login .wt-userlogedin{display: block;}
 }
 .wt-bannercontent .wt-title h1 span{
 	display: block;
-	font-weight:400; 
+	font-weight:400;
 }
 .wt-bannercontent .wt-bannerhead .wt-description p{
 	color: #fff;
@@ -1835,7 +1835,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-innerbannercontent{
 	float: left;
 	width: 100%;
-	text-align: center;	
+	text-align: center;
 }
 .wt-title{
 	float: left;
@@ -1983,7 +1983,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	margin: 0;
 	float: left;
 	width: 100%;
-	margin-bottom:40px; 
+	margin-bottom:40px;
 	border-radius: 4px;
 	background: #323232;
 }
@@ -2032,7 +2032,7 @@ body.wt-login .wt-userlogedin{display: block;}
     float: left;
     height: 82px;
     padding: 6px;
-    margin-right:13px; 
+    margin-right:13px;
     text-align: center;
     border-radius: 50%;
 	background: rgba(255, 88, 81, 0.20);
@@ -2067,7 +2067,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	list-style: none;
 	font-size: 16px;
 	line-height: 18px;
-	padding: 0 0 15px; 
+	padding: 0 0 15px;
 }
 .wt-articlesingle-content .wt-description .wt-blogliststyle {
     width: auto;
@@ -2086,14 +2086,14 @@ body.wt-login .wt-userlogedin{display: block;}
 	left: 0;
 	top: 7px;
 	color: #00cc8d;
-	font-size:16px; 
+	font-size:16px;
 	content: '\f00c';
 	margin: -7px 0 0px;
 	position: absolute;
 	font-family:'FontAwesome';
 }
 .wt-articlesingle-content .wt-description ul li span{
-	font-size: inherit; 
+	font-size: inherit;
 	line-height: inherit;
 }
 .wt-blogdetailimgvtwo{
@@ -2125,7 +2125,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-blogdetailimgvtwo.wt-alignright{
 	width: auto;
 	float: right;
-	margin-left: 30px;	
+	margin-left: 30px;
 }
 .wt-video{
 	float: left;
@@ -2146,10 +2146,10 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-tagsshare{
 	float: left;
 	width: 100%;
-	margin-top:10px; 
+	margin-top:10px;
 	padding: 40px 0;
 	border-top: 1px solid #eff2f5;
-	border-bottom: 1px solid #eff2f5; 
+	border-bottom: 1px solid #eff2f5;
 }
 .wt-tagsshare .wt-tag{width: auto;}
 .wt-tagsshare .wt-tag a{font-size: 12px;margin: 0 5px;line-height: 28px;}
@@ -2159,7 +2159,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	line-height: 18px;
 	display: inline-block;
 	padding: 6px 0;
-	margin-right:15px; 
+	margin-right:15px;
 }
 .wt-blogsocialicons{
 	width: auto;
@@ -2287,7 +2287,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-replaybox h2{
 	font-size: 20px;
 	margin: 0 0 16px;
-	font-weight: 400; 
+	font-weight: 400;
 	line-height: 18px;
 }
 .wt-formreply .wt-inputwithicon .form-control{padding: 10px 10px 10px 40px;}
@@ -2308,7 +2308,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	float: left;
 	color: #767676;
 	font-size: 14px;
-	line-height: inherit; 
+	line-height: inherit;
 	padding: 0 10px 0 0;
 }
 .wt-btnreply i{
@@ -2342,7 +2342,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	top: 4px;
 	left: 4px;
 	color:#999;
-	font-size: 14px; 
+	font-size: 14px;
 }
 .wt-formleavecomment .form-group:nth-child(5){width: 100%;}
 .wt-formleavecomment fieldset .form-group input.form-control::placeholder{color: #999;}
@@ -2365,7 +2365,7 @@ body.wt-login .wt-userlogedin{display: block;}
 }
 .wt-widgettitle{
 	margin-bottom:30px;
-	padding-bottom:17px;  
+	padding-bottom:17px;
 	border-bottom: 1px solid #ddd;
 }
 .wt-widgettitle h2{
@@ -2418,7 +2418,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	width: 100%;
 	display: block;
 	opacity: 0.80;
-	border-radius: 5px; 
+	border-radius: 5px;
 }
 .wt-particlehold:hover figure img{opacity: 0.4;}
 .wt-particlecontent{
@@ -2433,7 +2433,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	font-weight: 400;
 }
 .wt-particlecontent span{
-	color: #999; 
+	color: #999;
 	display: block;
 	font-size: 13px;
 	padding: 2px 0 0;
@@ -2470,7 +2470,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-classicaricle-header > .wt-title h2{
 	font-size:28px;
 	margin:0 0 18px;
-	line-height:28px; 
+	line-height:28px;
 }
 .wt-classicaricle-header .wt-description p{
 	color: #767676;
@@ -2582,7 +2582,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	width: 100%;
 	background: url(../images/signup.jpg);
 	background-size:cover;
-	background-repeat:no-repeat;  
+	background-repeat:no-repeat;
 }
 .wt-btnvtwo{background:#323232 !important;}
 /* Brands Style */
@@ -2706,7 +2706,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-accordionhold{
 	float: left;
 	width: 100%;
-	list-style:none; 
+	list-style:none;
 }
 .wt-accordionhold li{
 	float: left;
@@ -2802,7 +2802,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	top: 50%;
 	left: -32px;
 	height: 2px;
-	margin-top:-1px; 
+	margin-top:-1px;
 	background:#ddd;
 	position: absolute;
 }
@@ -2819,7 +2819,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-joinsteps li.wt-done-next a{
 	color: #fff;
 	background:#00cc8d;
-	border-color:#00cc8d; 
+	border-color:#00cc8d;
 }
 /* Register Form Style */
 .wt-formregister .wt-registerformgroup{
@@ -2842,7 +2842,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-form-group-dropdown .wt-select select{border-radius: 4px 0 0 4px;}
 .wt-formregister .wt-formregisterstart{margin-top:20px; }
 .wt-formtitle h4{
-	font-size:18px; 
+	font-size:18px;
 	margin: 0 0 7px;
 	font-weight: 400;
 	line-height: 18px;
@@ -2850,7 +2850,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-joinnowholder{
 	float: left;
 	width: 100%;
-	margin-top:37px; 
+	margin-top:37px;
 	text-align: center;
 }
 .wt-joinnowholder .wt-title h4{
@@ -2912,7 +2912,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-formaccordionhold .wt-accordiontitle .wt-radio input[type=radio]:checked + label{color: #323232;}
 .wt-termsconditions .wt-checkboxholder .wt-checkbox input[type=checkbox] + label span{
 	color: #323232;
-	margin-top:-7px; 
+	margin-top:-7px;
     font-size: 14px;
 	line-height: 23px;
 }
@@ -3102,9 +3102,9 @@ body.wt-login .wt-userlogedin{display: block;}
 	margin: 0;
 	float: left;
 	width: 50px;
-	height: 50px; 
+	height: 50px;
 	border:1px solid #ddd;
-	margin-right:15px; 
+	margin-right:15px;
 	border-radius: 50px;
 	display: flex;
     -webkit-box-orient: vertical;
@@ -3235,7 +3235,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-userlistingtitle{
 	float: left;
 	width: 100%;
-	margin-bottom:30px; 
+	margin-bottom:30px;
 }
 .wt-userlistingtitle span{
 	display: block;
@@ -3526,7 +3526,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	overflow: hidden;
 	border-radius: 4px;
 	position: relative;
-	margin-bottom:30px; 
+	margin-bottom:30px;
 }
 .wt-proposalhead{
 	float: left;
@@ -3655,7 +3655,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	font-size: 40px;
 	line-height: 36px;
 	padding-right:25px;
-	margin-right:30px;  
+	margin-right:30px;
 	border-right: 1px solid #ddd;
 }
 .wt-proposalsicon i{
@@ -3728,7 +3728,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	display: block;
 	font-size: 13px;
 	line-height: 15px;
-	margin-bottom:20px; 
+	margin-bottom:20px;
 }
 .wt-clicksavebtn{
 	color: #767676;
@@ -3918,7 +3918,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	width: 100%;
 	padding: 30px;
 	background: #fff;
-	margin-bottom:30px; 
+	margin-bottom:30px;
 	border-radius: 0 0 4px 4px;
 }
 .wt-comcontent .wt-title h3 {
@@ -3944,18 +3944,18 @@ body.wt-login .wt-userlogedin{display: block;}
 	width: 100%;
 	list-style:none;
 	line-height: 16px;
-	margin-bottom:20px; 
+	margin-bottom:20px;
 }
 .wt-jobalerts .alert{
 	float: left;
 	width: 100%;
-	border:1px solid; 
+	border:1px solid;
 	line-height: inherit;
 	list-style-type: none;
 	margin: 0 0 10px;
 	position: relative;
 	border-radius: 4px;
-	padding: 5px 50px 5px 20px; 
+	padding: 5px 50px 5px 20px;
 }
 .wt-jobalerts .alert span{
 	font-size: 14px;
@@ -3980,7 +3980,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	width: 100px;
 	float: right;
 	padding: 0 10px;
-	text-align: right; 
+	text-align: right;
 	line-height: 36px;
 	border-radius: 4px;
 	text-align: center;
@@ -4055,7 +4055,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	right:80px;
 	color: #999;
 	font-size: 16px;
-	line-height: 50px; 
+	line-height: 50px;
 	position: absolute;
 }
 .wt-proposalamount .form-group span i{color: #2ecc71;}
@@ -4063,7 +4063,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-totalamount{
 	float: left;
 	width: 100%;
-	margin-top:30px; 
+	margin-top:30px;
 	list-style:none;
 	line-height: 16px;
 }
@@ -4076,7 +4076,7 @@ body.wt-login .wt-userlogedin{display: block;}
 }
 .wt-totalamount li + li{
 	margin-top:20px;
-	padding-top:20px;  
+	padding-top:20px;
 	border-top:1px solid #ddd;
 }
 .wt-totalamount li h3{
@@ -4107,7 +4107,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-totalamount li span i{
 	border: 0;
 	color: #2ecc71;
-	margin-left:5px; 
+	margin-left:5px;
 	line-height: inherit;
 }
 .wt-totalamount li span strong{
@@ -4197,14 +4197,14 @@ body.wt-login .wt-userlogedin{display: block;}
 	overflow: hidden;
 	position: relative;
 	padding-right:0;
-	margin-bottom:30px; 
+	margin-bottom:30px;
 	border-radius: 4px;
-	margin-top:-242px; 
+	margin-top:-242px;
 }
 .wt-userprofile{
 	float: left;
 	width: 100%;
-	padding-right:15px; 
+	padding-right:15px;
 }
 .wt-userprofile figure{
 	margin: 0;
@@ -4246,7 +4246,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	width: 100%;
 	content: '';
 	position: absolute;
-	background: url(../images/bg-img.png);
+	/*background: url(../images/bg-img.png);*/
 	height: 99px;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -4255,7 +4255,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	float: left;
 	color: #55acee;
 	font-size: 14px;
-	margin-top:10px; 
+	margin-top:10px;
 	text-align: right;
 }
 .wt-btntext:hover,
@@ -4286,7 +4286,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	display: block;
 	color: #ff5851;
 	font-size: 14px;
-	margin-top:13px; 
+	margin-top:13px;
 	line-height: 18px;
 }
 .wt-userdetails.wt-displaynone{display: block;}
@@ -4377,7 +4377,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	opacity: 0.10; 
+	opacity: 0.10;
 	content: '';
 	background: url(../images/img-skills.png);
 	background-repeat: repeat;
@@ -4402,7 +4402,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	width: 100%;
 	background: #fff;
 	border-radius: 4px;
-	margin-bottom:30px; 
+	margin-bottom:30px;
 }
 .wt-usertitle{
 	float: left;
@@ -4463,7 +4463,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	float: left;
 	width: 33.33%;
 	padding: 0 15px;
-	margin-bottom:10px; 
+	margin-bottom:10px;
 }
 .wt-project figure{
 	float:left;
@@ -4503,7 +4503,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	width: 100%;
 	background: #fff;
 	border-radius: 4px;
-	margin-bottom:30px; 
+	margin-bottom:30px;
 }
 .wt-education{margin: 0;}
 .wt-experiencelisting-hold{
@@ -4637,7 +4637,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	font-size: 50px;
 	margin: 0 0 20px;
 	line-height: 60px;
-} 
+}
 .wt-comingsoon-content .wt-title h2 span{
 	display: block;
 	font-weight: 400;
@@ -4651,7 +4651,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-comming-sooncounter{
 	float: left;
 	width: 100%;
-	margin-top:80px; 
+	margin-top:80px;
 	list-style:none;
 }
 .wt-counterbox{
@@ -4708,7 +4708,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-fwidgettitle{
 	float: left;
 	width: 100%;
-	padding-bottom:15px; 
+	padding-bottom:15px;
 }
 .wt-fwidgettitle h3{
 	margin: 0;
@@ -4760,7 +4760,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-socialiconfooter.wt-socialiconssimple li a i{color: #fff;}
 .wt-widgetcompany{
 	padding-left:40px;
-	border-left: 1px solid rgba(255, 255, 255, 0.20); 
+	border-left: 1px solid rgba(255, 255, 255, 0.20);
 }
 .wt-footerholder .wt-fwidgettitle h3{color: #fff;}
 .wt-footerholder .wt-fwidgetcontent li a{color: #ccc;}
@@ -4907,7 +4907,7 @@ body.wt-login .wt-userlogedin{display: block;}
 }
 .wt-projectselect-content h3{
 	margin: 0 0 10px;
-	font-weight:400; 
+	font-weight:400;
 	font-size: 14px;
 	line-height: 16px;
 }
@@ -4949,7 +4949,7 @@ body.wt-login .wt-userlogedin{display: block;}
 .loader {
 	top: 50%;
 	left: 50%;
-	margin:-20px 0 0 -20px; 
+	margin:-20px 0 0 -20px;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -5069,22 +5069,22 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-btndisbaled{pointer-events: none;}
 @keyframes floating {
 	0% {
-		transform: translateY(0%);	
+		transform: translateY(0%);
 	}
 	50% {
-		transform: translateY(5%);	
-	}	
+		transform: translateY(5%);
+	}
 	100% {
 		transform: translateY(0%);
-	}			
+	}
 }
 @-webkit-keyframes floating {
 	0% {
-		-webkit-transform: translateY(0%);	
+		-webkit-transform: translateY(0%);
 	}
 	50% {
-		-webkit-transform: translateY(15%);	
-	}	
+		-webkit-transform: translateY(15%);
+	}
 	100% {
 		-webkit-transform: translateY(0%);
 	}

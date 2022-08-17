@@ -15,6 +15,8 @@ return [
 
     'register' => 'Регистрация',
     'name' => 'Имя',
+    'lastname' => 'Фамилия',
+    'login' => 'Логин',
     'type' => 'Тип профиля',
     'customer' => 'Заказчик',
     'freelancer' => 'Фрилансер',

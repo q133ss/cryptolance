@@ -14,12 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->string('login')->nullable()->unique();
             $table->string('lastname')->nullable();
             $table->string('speciality')->nullable();
             $table->text('about')->nullable();
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->foreignId('role_id')->constrained()->onDelete('cascade');
             $table->double('balance')->default(0);
+            $table->timestamp('last_active')->nullable();
         });
     }
 

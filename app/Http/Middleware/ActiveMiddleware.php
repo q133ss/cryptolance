@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class AccountCreateMiddleware
+class ActiveMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,11 +16,11 @@ class AccountCreateMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $user = Auth()->user();
-        if($user->speciality != null || $user->about != null){
-            return $next($request);
-        }else{
-            return to_route('account.settings');
+        if(Auth()->check()) {
+            $user = Auth()->user();
+            $user->last_active = now();
+            $user->save();
         }
+        return $next($request);
     }
 }

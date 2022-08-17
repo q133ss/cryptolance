@@ -90,15 +90,15 @@
                             <div class="wt-usersingle">
                                 <div class="wt-clientfeedback">
                                     <div class="wt-usertitle wt-titlewithselect">
-                                        <h2>Client Feedback</h2>
+                                        <h2>Отзывы</h2>
                                         <div class="form-group">
-													<span class="wt-select">
-														<select>
-															<option value="Show All">Show All</option>
-															<option value="One Page">One Page </option>
-															<option value="Two Page">Two Page</option>
-														</select>
-													</span>
+                                            <span class="wt-select">
+                                                <select>
+                                                    <option value="Show All">Все</option>
+                                                    <option value="One Page">Сначала положительные </option>
+                                                    <option value="Two Page">Сначала негативные</option>
+                                                </select>
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="wt-userlistinghold wt-userlistingsingle wt-bgcolor">
@@ -169,7 +169,7 @@
                                 </div>
                                 <div class="wt-craftedprojects">
                                     <div class="wt-usertitle">
-                                        <h2>Crafted Projects</h2>
+                                        <h2>Выполненые работы</h2>
                                     </div>
                                     <div class="wt-projects">
                                         <div class="wt-project">
@@ -231,219 +231,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="wt-experience">
-                                    <div class="wt-usertitle">
-                                        <h2>Experience</h2>
-                                    </div>
-                                    <div class="wt-experiencelisting-hold">
-                                        <div class="wt-experiencelisting wt-bgcolor">
-                                            <div class="wt-title">
-                                                <h3>Web &amp; Apps Project Manager</h3>
-                                            </div>
-                                            <div class="wt-experiencecontent">
-                                                <ul class="wt-userlisting-breadcrumb">
-                                                    <li><span><i class="far fa-building"></i> Amento Tech</span></li>
-                                                    <li><span><i class="far fa-calendar"></i> Aug 2017 - Till Now</span></li>
-                                                </ul>
-                                                <div class="wt-description">
-                                                    <p>“ Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaenim ad minim veniamac quis nostrud exercitation ullamco laboris. ”</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="wt-experiencelisting">
-                                            <div class="wt-title">
-                                                <h3>Sr. PHP &amp; Laravel Developer</h3>
-                                            </div>
-                                            <div class="wt-experiencecontent">
-                                                <ul class="wt-userlisting-breadcrumb">
-                                                    <li><span><i class="far fa-building"></i> Amento Tech</span></li>
-                                                    <li><span><i class="far fa-calendar"></i> Jun 2017 - Jul 2018</span></li>
-                                                </ul>
-                                                <div class="wt-description">
-                                                    <p>“ Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaenim ad minim veniamac quis nostrud exercitation ullamco laboris. ”</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="wt-experiencelisting wt-bgcolor">
-                                            <div class="wt-title">
-                                                <h3>PHP Developer</h3>
-                                            </div>
-                                            <div class="wt-experiencecontent">
-                                                <ul class="wt-userlisting-breadcrumb">
-                                                    <li><span><i class="far fa-building"></i> Amento Tech</span></li>
-                                                    <li><span><i class="far fa-calendar"></i> Apr 2016 - Jul 2017</span></li>
-                                                </ul>
-                                                <div class="wt-description">
-                                                    <p>“ Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaenim ad minim veniamac quis nostrud exercitation ullamco laboris. ”</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="divheight"></div>
-                                    </div>
-                                </div>
-                                <div class="wt-experience wt-education">
-                                    <div class="wt-usertitle">
-                                        <h2>Education</h2>
-                                    </div>
-                                    <div class="wt-experiencelisting-hold">
-                                        <div class="wt-experiencelisting wt-bgcolor">
-                                            <div class="wt-title">
-                                                <h3>Web &amp; Apps Project Manager</h3>
-                                            </div>
-                                            <div class="wt-experiencecontent">
-                                                <ul class="wt-userlisting-breadcrumb">
-                                                    <li><span><i class="far fa-building"></i> Amento Tech</span></li>
-                                                    <li><span><i class="far fa-calendar"></i> Aug 2017 - Till Now</span></li>
-                                                </ul>
-                                                <div class="wt-description">
-                                                    <p>“ Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaenim ad minim veniamac quis nostrud exercitation ullamco laboris. ”</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="wt-experiencelisting">
-                                            <div class="wt-title">
-                                                <h3>Sr. PHP &amp; Laravel Developer</h3>
-                                            </div>
-                                            <div class="wt-experiencecontent">
-                                                <ul class="wt-userlisting-breadcrumb">
-                                                    <li><span><i class="far fa-building"></i> Amento Tech</span></li>
-                                                    <li><span><i class="far fa-calendar"></i> Jun 2017 - Jul 2018</span></li>
-                                                </ul>
-                                                <div class="wt-description">
-                                                    <p>“ Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaenim ad minim veniamac quis nostrud exercitation ullamco laboris. ”</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="wt-experiencelisting wt-bgcolor">
-                                            <div class="wt-title">
-                                                <h3>PHP Developer</h3>
-                                            </div>
-                                            <div class="wt-experiencecontent">
-                                                <ul class="wt-userlisting-breadcrumb">
-                                                    <li><span><i class="far fa-building"></i> Amento Tech</span></li>
-                                                    <li><span><i class="far fa-calendar"></i> Apr 2016 - Jul 2017</span></li>
-                                                </ul>
-                                                <div class="wt-description">
-                                                    <p>“ Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaenim ad minim veniamac quis nostrud exercitation ullamco laboris. ”</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="divheight"></div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 float-left">
                             <aside id="wt-sidebar" class="wt-sidebar">
-                                <div id="wt-ourskill" class="wt-widget">
-                                    <div class="wt-widgettitle">
-                                        <h2>My Skills</h2>
-                                    </div>
-                                    <div class="wt-widgetcontent wt-skillscontent">
-                                        <div class="wt-skillholder" data-percent="90%">
-                                            <span>PHP <em>90%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-skillholder" data-percent="55%">
-                                            <span>Website Design <em>55%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-skillholder" data-percent="99%">
-                                            <span>HTML 5 <em>99%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-skillholder" data-percent="80%">
-                                            <span>Graphic Design <em>80%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-skillholder" data-percent="75%">
-                                            <span>WordPress <em>75%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-skillholder" data-percent="35%">
-                                            <span>SEO <em>35%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-skillholder" data-percent="40%">
-                                            <span>My SQL <em>40%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-skillholder" data-percent="80%">
-                                            <span>Content Writing <em>80%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-skillholder" data-percent="80%">
-                                            <span>CSS <em>80%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-skillholder" data-percent="75%">
-                                            <span>Jquery <em>75%</em></span>
-                                            <div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
-                                        </div>
-                                        <div class="wt-btnarea">
-                                            <a href="javascript:void(0)">View More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wt-widget wt-widgetarticlesholder wt-articlesuser">
-                                    <div class="wt-widgettitle">
-                                        <h2>Awards &amp; Certifications</h2>
-                                    </div>
-                                    <div class="wt-widgetcontent">
-                                        <div class="wt-particlehold">
-                                            <figure>
-                                                <img src="/assets/images/thumbnail/img-07.jpg" alt="image description">
-                                            </figure>
-                                            <div class="wt-particlecontent">
-                                                <h3><a href="javascript:void(0);">Top PHP Excel Skills</a></h3>
-                                                <span><i class="lnr lnr-calendar"></i> Jun 27, 2018</span>
-                                            </div>
-                                        </div>
-                                        <div class="wt-particlehold">
-                                            <figure>
-                                                <img src="/assets/images/thumbnail/img-08.jpg" alt="image description">
-                                            </figure>
-                                            <div class="wt-particlecontent">
-                                                <h3><a href="javascript:void(0);">Monster Developer Award</a></h3>
-                                                <span><i class="lnr lnr-calendar"></i> Apr 27, 2018</span>
-                                            </div>
-                                        </div>
-                                        <div class="wt-particlehold">
-                                            <figure>
-                                                <img src="/assets/images/thumbnail/img-09.jpg" alt="image description">
-                                            </figure>
-                                            <div class="wt-particlecontent">
-                                                <h3><a href="javascript:void(0);">Best Communication 2015</a></h3>
-                                                <span><i class="lnr lnr-calendar"></i> May 27, 2018</span>
-                                            </div>
-                                        </div>
-                                        <div class="wt-particlehold">
-                                            <figure>
-                                                <img src="/assets/images/thumbnail/img-10.jpg" alt="image description">
-                                            </figure>
-                                            <div class="wt-particlecontent">
-                                                <h3><a href="javascript:void(0);">Best Logo Design Winner</a></h3>
-                                                <span><i class="lnr lnr-calendar"></i> Aug 27, 2018</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wt-proposalsr">
-                                    <div class="tg-authorcodescan tg-authorcodescanvtwo">
-                                        <figure class="tg-qrcodeimg">
-                                            <img src="/assets/images/qrcode.png" alt="img description">
-                                        </figure>
-                                        <div class="tg-qrcodedetail">
-                                            <span class="lnr lnr-laptop-phone"></span>
-                                            <div class="tg-qrcodefeat">
-                                                <h3>Scan with your <span>Smart Phone </span> To Get It Handy.</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="wt-widget">
                                     <div class="wt-widgettitle">
-                                        <h2>Similar Freelancers</h2>
+                                        <h2>Навыки</h2>
                                     </div>
                                     <div class="wt-widgetcontent">
                                         <div class="wt-widgettag wt-widgettagvtwo">
@@ -459,7 +253,7 @@
                                 </div>
                                 <div class="wt-widget wt-sharejob">
                                     <div class="wt-widgettitle">
-                                        <h2>Share This User</h2>
+                                        <h2>Поделиться профилем</h2>
                                     </div>
                                     <div class="wt-widgetcontent">
                                         <ul class="wt-socialiconssimple">
@@ -470,9 +264,10 @@
                                         </ul>
                                     </div>
                                 </div>
+                                @if(Route::currentRouteName() != 'account.index')
                                 <div class="wt-widget wt-reportjob">
                                     <div class="wt-widgettitle">
-                                        <h2>Report This User</h2>
+                                        <h2>Пожаловаться на пользователя</h2>
                                     </div>
                                     <div class="wt-widgetcontent">
                                         <form class="wt-formtheme wt-formreport">
@@ -498,6 +293,7 @@
                                         </form>
                                     </div>
                                 </div>
+                                @endif
                             </aside>
                         </div>
                     </div>

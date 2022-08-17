@@ -81,7 +81,7 @@
                                             </div>
 
                                             <div class="form-group form-group-half">
-                                                <input type="text" name="nickname" value="{{$user->nickname}}" class="form-control @if($errors->has('nickname')) is-invalid @endif" placeholder="Ваш логин">
+                                                <input type="text" name="nickname" value="{{$user->login}}" class="form-control @if($errors->has('login')) is-invalid @endif" placeholder="Ваш логин">
                                             </div>
 
                                             <div class="form-group">

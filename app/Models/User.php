@@ -27,7 +27,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'lastname',
         'email',
+        'login',
         'password',
         'role_id'
     ];
@@ -78,6 +80,15 @@ class User extends Authenticatable
             $file->filable_id = $this->id;
             $file->save();
         }
+    }
+
+    public function noAvatar($path){
+        $file = new File();
+        $file->src = $path;
+        $file->category = 'avatar';
+        $file->filable_type = 'App\Models\User';
+        $file->filable_id = $this->id;
+        $file->save();
     }
 
     /**
