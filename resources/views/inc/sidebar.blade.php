@@ -10,13 +10,13 @@
     <div id="wt-verticalscrollbar" class="wt-verticalscrollbar">
         <div class="wt-companysdetails wt-usersidebar">
             <figure class="wt-companysimg">
-                <img src="/assets/images/sidebar/img-01.jpg" alt="img description">
+                <img src="@if($user->banner->src){{$user->banner->src}}@else /assets/images/sidebar/img-01.jpg @endif" alt="img description">
             </figure>
             <div class="wt-companysinfo">
-                <figure><img src="{{Auth()->user()->avatar}}" alt="avatar"></figure>
+                <figure><img src="@if($user->avatar){{$user->avatar->src}}@else /img/no-avatar.webp @endif" alt="avatar"></figure>
                 <div class="wt-title">
-                    <h2><a href="javascript:void(0);">{{Auth()->user()->name}}</a></h2>
-                    <span>{{Auth()->user()->role->name}}</span>
+                    <h2><a href="javascript:void(0);">{{$user->name}}</a></h2>
+                    <span>{{$user->role->name}}</span>
                 </div>
                 <div class="wt-btnarea"><a href="dashboard-postjob.html" class="wt-btn">Создать заказ</a></div>
             </div>

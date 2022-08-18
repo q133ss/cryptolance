@@ -17,10 +17,10 @@ class AccountCreateMiddleware
     public function handle(Request $request, Closure $next)
     {
         $user = Auth()->user();
-        if($user->speciality != null || $user->about != null){
+        if($user->speciality != null && $user->about != null && $user->login != null && $user->lastname){
             return $next($request);
         }else{
-            return to_route('account.settings');
+            return to_route('account.settings')->withError('No data');
         }
     }
 }

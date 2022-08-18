@@ -5,7 +5,7 @@
 @endsection
 @section('content')
     <main id="wt-main" class="wt-main wt-haslayout">
-        @include('inc.sidebar')
+        @include('inc.sidebar', $user)
         <!--Register Form Start-->
         <section class="wt-haslayout wt-dbsectionspace">
             <div class="row">
@@ -28,11 +28,13 @@
                                         <h2>Основная информация</h2>
                                     </div>
                                     <div class="wt-settingscontent">
+                                        @if(session()->has('error'))
                                         <div class="wt-description">
                                             <p>
-                                                Заполните основную информацию о себе, что бы получить доступ к бирже
+                                                Заполните основную информацию о себе, что бы получить доступ к бирже и аккаунту
                                             </p>
                                         </div>
+                                        @endif
                                         <ul class="wt-accountinfo">
 {{--                                            <div class="form-group">--}}
 {{--                                                <label for="avatar">Ваше фото</label>--}}
@@ -79,9 +81,8 @@
                                                     </select>
                                                 </span>
                                             </div>
-
                                             <div class="form-group form-group-half">
-                                                <input type="text" name="nickname" value="{{$user->login}}" class="form-control @if($errors->has('login')) is-invalid @endif" placeholder="Ваш логин">
+                                                <input type="text" name="login" value="{{$user->login}}" class="form-control @if($errors->has('login')) is-invalid @endif" placeholder="Ваш логин">
                                             </div>
 
                                             <div class="form-group">

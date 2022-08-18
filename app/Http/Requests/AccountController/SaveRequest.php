@@ -27,6 +27,7 @@ class SaveRequest extends FormRequest
             return [
                 'name' => 'required|string',
                 'lastname' => 'required|string',
+                'login' => 'required',
                 'speciality' => 'required|string|max:255',
                 'about' => 'required|string',
                 'lang' => 'string',
@@ -38,6 +39,7 @@ class SaveRequest extends FormRequest
                 'avatar' => 'required',
                 'name' => 'required|string',
                 'lastname' => 'required|string',
+                'login' => 'required',
                 'speciality' => 'required|string|max:255',
                 'about' => 'required|string',
                 'lang' => 'string',
