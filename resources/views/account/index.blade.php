@@ -2,7 +2,7 @@
 @section('title', 'Аккаунт')
 @section('content')
     <!--Inner Home Banner Start-->
-    <div class="wt-haslayout wt-innerbannerholder wt-innerbannerholdervtwo">
+    <div class="wt-haslayout wt-innerbannerholder wt-innerbannerholdervtwo" style="background-image: url(@if($user->banner)'{{$user->banner->src}}'@else'/assets/images/bannerimg/img-03.jpg'@endif">
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col-xs-12 col-sm-12 col-md-8 push-md-2 col-lg-6 push-lg-3">

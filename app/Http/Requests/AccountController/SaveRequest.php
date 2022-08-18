@@ -30,7 +30,8 @@ class SaveRequest extends FormRequest
                 'speciality' => 'required|string|max:255',
                 'about' => 'required|string',
                 'lang' => 'string',
-                'currency' => 'string'
+                'currency' => 'string',
+                'banner' => 'file'
             ];
         }else {
             return [
@@ -40,7 +41,8 @@ class SaveRequest extends FormRequest
                 'speciality' => 'required|string|max:255',
                 'about' => 'required|string',
                 'lang' => 'string',
-                'currency' => 'string'
+                'currency' => 'string',
+                'banner' => 'file'
             ];
         }
     }

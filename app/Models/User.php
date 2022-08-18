@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Storage;
 
 /*
  * This is the model class for table "{{%user}}".
@@ -66,8 +67,9 @@ class User extends Authenticatable
      */
     public function changeAvatar($img):void{
         if($this->avatar){
-            //нужно удалять старый
             $file = File::where('category', 'avatar')->where('filable_type','App\Models\User')->where('filable_id', $this->id)->first();
+            $formatted_src = str_replace('/storage', '', $file->src);
+            Storage::disk('public')->delete($formatted_src);
             $img_path = $img->store('uploads', 'public');
             $file->src = '/storage/'.$img_path;
             $file->save();
@@ -82,6 +84,10 @@ class User extends Authenticatable
         }
     }
 
+    /**
+     * @param $path
+     * @return void
+     */
     public function noAvatar($path){
         $file = new File();
         $file->src = $path;
@@ -89,6 +95,36 @@ class User extends Authenticatable
         $file->filable_type = 'App\Models\User';
         $file->filable_id = $this->id;
         $file->save();
+    }
+
+    /**
+     * @param $img
+     * @return void
+     */
+    public function changeBanner($img):void{
+        $img_path = $img->store('uploads', 'public');
+        if(!$this->banner) {
+            $file = new File();
+            $file->src = '/storage/'.$img_path;
+            $file->category = 'banner';
+            $file->filable_type = 'App\Models\User';
+            $file->filable_id = $this->id;
+            $file->save();
+        }else{
+            //Удаляем прошлый файл и иеняем src
+            $file = File::find($this->banner()->id);
+            $formatted_src = str_replace('/storage', '', $file->src);
+            Storage::disk('public')->delete($formatted_src);
+            $file->src = '/storage/'.$img_path;
+            $file->save();
+        }
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     */
+    public function banner(){
+        return $this->morphOne(File::class, 'filable')->where('category', 'banner')->limit(1);
     }
 
     /**

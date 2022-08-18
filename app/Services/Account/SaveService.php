@@ -10,8 +10,11 @@ class SaveService{
         $user->speciality = $request->speciality;
         $user->about = $request->about;
         $user->save();
-        if($request->avatar){
+        if($request->hasFile('avatar')){
             $user->changeAvatar($request->file('avatar'));
+        }
+        if($request->hasFile('banner')){
+            $user->changeBanner($request->file('banner'));
         }
         return $user;
     }

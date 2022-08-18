@@ -91,6 +91,33 @@
                                             <div class="form-group">
                                                 <textarea name="about" class="form-control @if($errors->has('about')) is-invalid @endif" placeholder="Расскажите немного о себе">{{$user->about}}</textarea>
                                             </div>
+
+
+                                            <label for="avatar">Баннер</label>
+                                            <div class="form-group form-group-label">
+                                                <div class="wt-labelgroup" style="text-align: center">
+                                                    <label for="banner">
+                                                        <span class="wt-btn">Выбрать фото</span>
+                                                        <input type="file" name="banner" id="banner">
+                                                    </label>
+                                                    <em class="wt-fileuploading">Загрузка<i class="fa fa-spinner fa-spin"></i></em>
+                                                </div>
+                                            </div>
+                                            @if($user->banner)
+                                                <div class="form-group">
+                                                    <ul class="wt-attachfile wt-attachfilevtwo">
+                                                        <li class="wt-uploadingholder">
+                                                            <div class="wt-uploadingbox">
+                                                                <div class="wt-designimg">
+                                                                    <input id="demoq" type="radio" name="employees" value="company" checked="">
+                                                                    <label for="demoq"><img src="{{$user->banner->src}}" alt="img description"><i class="fa fa-check"></i></label>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            @endif
+
                                         </ul>
                                     </div>
                                 </div>
