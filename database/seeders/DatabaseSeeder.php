@@ -11,6 +11,7 @@ use App\Models\Type;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
@@ -84,6 +85,28 @@ class DatabaseSeeder extends Seeder
                 'language_id' => 1,
                 'time_id' => rand(1,14),
                 'user_id' => rand(1,5)
+            ]);
+        }
+
+        $skills = [
+            'PHP',
+            'Linux',
+            'Laravel',
+            'VUE',
+            'MySQL',
+            'PostgreSQL',
+            'AJAX'
+        ];
+
+        foreach ($skills as $skill){
+            \App\Models\Skill::create([
+                'name' => $skill
+            ]);
+        }
+
+        for($i = 1; $i < 5; $i++){
+            DB::table('user_skill')->insert([
+                ['user_id' => 1, 'skill_id' => $i]
             ]);
         }
     }

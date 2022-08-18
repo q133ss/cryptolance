@@ -243,13 +243,13 @@
                                     </div>
                                     <div class="wt-widgetcontent">
                                         <div class="wt-widgettag wt-widgettagvtwo">
-                                            <a href="javascript:void(0);">PHP Developer</a>
-                                            <a href="javascript:void(0);">PHP</a>
-                                            <a href="javascript:void(0);">My SQL</a>
-                                            <a href="javascript:void(0);">Business</a>
-                                            <a href="javascript:void(0);">Website Development</a>
-                                            <a href="javascript:void(0);">Collaboration</a>
-                                            <a href="javascript:void(0);">Decent</a>
+                                            @if($user->skills()->exists())
+                                            @foreach($user->skills as $skill)
+                                                <a href="javascript:void(0);">{{$skill->name}}</a>
+                                            @endforeach
+                                            @else
+                                                <a href="javascript:void(0);">Пользователь не указал свои навыки</a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

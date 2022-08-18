@@ -93,7 +93,6 @@
                                                 <textarea name="about" class="form-control @if($errors->has('about')) is-invalid @endif" placeholder="Расскажите немного о себе">{{$user->about}}</textarea>
                                             </div>
 
-
                                             <label for="avatar">Баннер</label>
                                             <div class="form-group form-group-label">
                                                 <div class="wt-labelgroup" style="text-align: center">

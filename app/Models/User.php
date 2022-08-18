@@ -151,8 +151,16 @@ class User extends Authenticatable
      * Check is user online.
      * @return bool
      */
-    public function isOnline()
-    {
+    public function isOnline(){
         return Cache::has('user-is-online-' . $this->id);
+    }
+
+    /**
+     * return user skills
+     * skill
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function skills(){
+        return $this->belongsToMany(Skill::class, 'user_skill');
     }
 }

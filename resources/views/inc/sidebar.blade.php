@@ -10,7 +10,7 @@
     <div id="wt-verticalscrollbar" class="wt-verticalscrollbar">
         <div class="wt-companysdetails wt-usersidebar">
             <figure class="wt-companysimg">
-                <img src="@if($user->banner->src){{$user->banner->src}}@else /assets/images/sidebar/img-01.jpg @endif" alt="img description">
+                <img src="@if($user->banner){{$user->banner->src}}@else /assets/images/sidebar/img-01.jpg @endif" alt="img description">
             </figure>
             <div class="wt-companysinfo">
                 <figure><img src="@if($user->avatar){{$user->avatar->src}}@else /img/no-avatar.webp @endif" alt="avatar"></figure>
