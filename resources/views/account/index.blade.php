@@ -25,7 +25,9 @@
                                     <div class="wt-userprofile">
                                         <figure>
                                             <img src="{{$user->avatar->src}}" alt="avatar">
+                                            @if($user->isOnline())
                                             <div class="wt-userdropdown wt-online">
+                                            @endif
                                             </div>
                                         </figure>
                                         <div class="wt-title">

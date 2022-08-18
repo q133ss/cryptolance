@@ -21,7 +21,6 @@ return new class extends Migration
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->foreignId('role_id')->constrained()->onDelete('cascade');
             $table->double('balance')->default(0);
-            $table->timestamp('last_active')->nullable();
         });
     }
 

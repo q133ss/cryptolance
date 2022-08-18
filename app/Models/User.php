@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Cache;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Storage;
 
@@ -55,6 +56,7 @@ class User extends Authenticatable
     ];
 
     /**
+     * get user role model
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function role(){
@@ -62,6 +64,7 @@ class User extends Authenticatable
     }
 
     /**
+     * Change user avatar
      * @param $img
      * @return void
      */
@@ -85,6 +88,7 @@ class User extends Authenticatable
     }
 
     /**
+     * ?>?>?>?
      * @param $path
      * @return void
      */
@@ -98,6 +102,7 @@ class User extends Authenticatable
     }
 
     /**
+     * Change user banner
      * @param $img
      * @return void
      */
@@ -121,6 +126,7 @@ class User extends Authenticatable
     }
 
     /**
+     * Get user banner model
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
      */
     public function banner(){
@@ -128,6 +134,7 @@ class User extends Authenticatable
     }
 
     /**
+     * Get user avatar model
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
      */
     public function avatar(){
@@ -138,5 +145,14 @@ class User extends Authenticatable
         $name = $this->name;
         $lastname = $this->lastname;
         return $name.' '.$lastname;
+    }
+
+    /**
+     * Check is user online.
+     * @return bool
+     */
+    public function isOnline()
+    {
+        return Cache::has('user-is-online-' . $this->id);
     }
 }

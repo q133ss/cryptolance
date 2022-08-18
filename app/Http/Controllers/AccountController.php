@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AccountController\SaveRequest;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -12,6 +13,10 @@ class AccountController extends Controller
 {
     public function index(){
         $user = Auth()->user();
+        return view('account.index', compact('user'));
+    }
+
+    public function user(User $user){
         return view('account.index', compact('user'));
     }
 
