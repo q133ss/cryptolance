@@ -87,27 +87,5 @@ class DatabaseSeeder extends Seeder
                 'user_id' => rand(1,5)
             ]);
         }
-
-        $skills = [
-            'PHP',
-            'Linux',
-            'Laravel',
-            'VUE',
-            'MySQL',
-            'PostgreSQL',
-            'AJAX'
-        ];
-
-        foreach ($skills as $skill){
-            \App\Models\Skill::create([
-                'name' => $skill
-            ]);
-        }
-
-        for($i = 1; $i < 5; $i++){
-            DB::table('user_skill')->insert([
-                ['user_id' => 1, 'skill_id' => $i]
-            ]);
-        }
     }
 }
