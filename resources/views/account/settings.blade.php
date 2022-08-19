@@ -43,13 +43,14 @@
                                             <label for="avatar">Ваше фото</label>
                                             <div class="form-group form-group-label">
                                                 <div class="wt-labelgroup" style="text-align: center">
-                                                    <label for="filew">
+                                                    <label for="avatar">
                                                         <span class="wt-btn">Выбрать фото</span>
-                                                        <input type="file" name="avatar" id="filew">
+                                                        <input type="file" name="avatar" id="avatar">
                                                     </label>
                                                     <em class="wt-fileuploading">Загрузка<i class="fa fa-spinner fa-spin"></i></em>
                                                 </div>
                                             </div>
+                                            <div id="usr-avatar-point"></div>
                                             @if($user->avatar)
                                             <div class="form-group">
                                                 <ul class="wt-attachfile wt-attachfilevtwo">
@@ -57,7 +58,7 @@
                                                         <div class="wt-uploadingbox">
                                                             <div class="wt-designimg">
                                                                 <input id="demoq" type="radio" name="employees" value="company" checked="">
-                                                                <label for="demoq"><img src="{{$user->avatar->src}}" alt="img description"><i class="fa fa-check"></i></label>
+                                                                <label for="demoq"><img src="{{$user->avatar->src}}" id="avatar_img" alt="img description"><i class="fa fa-check"></i></label>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -103,6 +104,7 @@
                                                     <em class="wt-fileuploading">Загрузка<i class="fa fa-spinner fa-spin"></i></em>
                                                 </div>
                                             </div>
+                                            <div id="usr-banner-point"></div>
                                             @if($user->banner)
                                                 <div class="form-group">
                                                     <ul class="wt-attachfile wt-attachfilevtwo">
@@ -110,7 +112,7 @@
                                                             <div class="wt-uploadingbox">
                                                                 <div class="wt-designimg">
                                                                     <input id="demoq" type="radio" name="employees" value="company" checked="">
-                                                                    <label for="demoq"><img src="{{$user->banner->src}}" alt="img description"><i class="fa fa-check"></i></label>
+                                                                    <label for="demoq"><img src="{{$user->banner->src}}" alt="img description" id="banner_img"><i class="fa fa-check"></i></label>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -268,4 +270,52 @@
         </section>
         <!--Register Form End-->
     </main>
+@endsection
+@section('scripts')
+    <script>
+        //Avatar preview
+        document.querySelector("#avatar").addEventListener("change", function () {
+            if (this.files[0]) {
+                var fr = new FileReader();
+                let isCan = true;
+                fr.addEventListener("load", function () {
+                    @if(!$user->avatar)
+                        if(isCan == true) {
+                            $('#usr-avatar-point').html('<div class="form-group"> <ul class="wt-attachfile wt-attachfilevtwo"> <li class="wt-uploadingholder"> <div class="wt-uploadingbox"> <div class="wt-designimg"> <input id="demoq" type="radio" name="employees" value="company" checked=""> <label for="demoq"><img src="' + fr.result + '" alt="img description" id="avatar_img"></label> </div></div> </li></ul> </div>')
+                            isCan = false;
+                        }else{
+                            $('#avatar_img').attr('src', fr.result)
+                        }
+                    @else
+                    $('#avatar_img').attr('src', fr.result)
+                    @endif
+                }, false);
+
+                fr.readAsDataURL(this.files[0]);
+            }
+        });
+
+        //Banner preview
+        document.querySelector("#banner").addEventListener("change", function () {
+            if (this.files[0]) {
+                var fr = new FileReader();
+                let isCan = true;
+
+                fr.addEventListener("load", function () {
+                    @if(!$user->banner)
+                        if(isCan == true) {
+                            $('#usr-banner-point').html('<div class="form-group"> <ul class="wt-attachfile wt-attachfilevtwo"> <li class="wt-uploadingholder"> <div class="wt-uploadingbox"> <div class="wt-designimg"> <input id="demoq" type="radio" name="employees" value="company" checked=""> <label for="demoq"><img src="' + fr.result + '" alt="img description" id="banner_img"></label> </div></div> </li></ul> </div>')
+                            isCan = false;
+                        }else{
+                            $('#banner_img').attr('src', fr.result)
+                        }
+                    @else
+                        $('#banner_img').attr('src', fr.result)
+                    @endif
+                }, false);
+
+                fr.readAsDataURL(this.files[0]);
+            }
+        });
+    </script>
 @endsection
